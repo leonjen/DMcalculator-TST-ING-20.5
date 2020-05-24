@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器1.0</title>
+	<script src="js/calculator.js"></script>
+	<style>
+		.camin{
+			width: 500px;
+			height: 600px;
+		}
+		td>input{
+			width: 100%;
+			height: 50px;
+		}
+		button span{
+			display: block;
+			width: 75px;
+			height: 60px;
+			line-height: 60px;
+			font-size: 24px;
+		}
+		button{
+			border:#898a8c solid 1px;
+			background-color: #7C7C7C;
+			/*设置圆角*/
+			border-radius: 15px;
+			box-shadow:0px 4px 1px #888888; 
+		}
+		div{
+			width: 500px;
+			border:#898a8c solid 1px;
+			/*设置阴影 x y 模糊程度 颜色*/
+			box-shadow:10px 10px 5px #888888; 
+		}
+		a{
+			text-decoration: none;
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+		}
+		a:hover{
+			color: pink;
+		}
+		caption{
+			font-size:30px;
+			letter-spacing: 5px;
+			font-family: 宋体;
+			margin-top: 15px;
+		}
+		.org-c{
+			background-color: #FE6600;
+			border:#FE6600 solid 1px;
+		}
+		.nub-c{
+			background-color: #fff;
+		}
+		.nub-c a{
+			color: #333;
+		}
+		.nub-c a:hover{
+			color: #FE6600;
+		}
+	</style>
+</head>
+<body>
+	<div >
+		<table class='camin'  cellspacing="25" >
+			<caption>大米计算器</caption>
+			<tr>
+				<td colspan="4"><input type="text" maxlength="17" size="17"></td>
+			</tr>
+			<tr>
+				<td><button><span><a href="#">存储</a></span></button></td>
+				<td><button><span><a href="#">取存</a></span></button></td>
+				<td><button class="org-c"><span><a href="#">退格</a></span></button></td>
+				<td><button class="org-c"><span><a href="#">清屏</a></span></button></td>
+			</tr>
+			<tr>
+				<td><button><span><a href="#">累存</a></span></button></td>
+				<td><button><span><a href="#">积存</a></span></button></td>
+				<td><button><span><a href="#">清存</a></span></button></td>
+				<td><button><span><a href="#">÷</a></span></button></td>
+			</tr>
+			<tr>
+				<td><button class="nub-c"><span><a href="#">7</a></span></button></td>
+				<td><button class="nub-c"><span><a href="#">8</a></span></button></td>
+				<td><button class="nub-c"><span><a href="#">9</a></span></button></td>
+				<td><button><span><a href="#">×</a></span></button></td>
+			</tr>
+			<tr>
+				<td><button class="nub-c"><span><a href="#">4</a></span></button></td>
+				<td><button class="nub-c"><span><a href="#">5</a></span></button></td>
+				<td><button class="nub-c"><span><a href="#">6</a></span></button></td>
+				<td><button><span><a href="#">-</a></span></button></td>
+			</tr>
+			<tr>
+				<td><button class="nub-c"><span><a href="#">1</a></span></button></td>
+				<td><button class="nub-c"><span><a href="#">2</a></span></button></td>
+				<td><button class="nub-c"><span><a href="#">3</a></span></button></td>
+				<td><button><span><a href="#">+</a></span></button></td>
+			</tr>
+			<tr>
+				<td><button class="nub-c"><span><a href="#">0</a></span></button></td>
+				<td><button class="nub-c"><span><a href="#">.</a></span></button></td>
+				<td><button class="nub-c"><span><a href="#">+/-</a></span></button></td>
+				<td><button id='equal' class="org-c"><span><a href="#">=</a></span></button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+<script>
+	// onmouseup 释放鼠标
+	var omd=document.onMouseDown=function (ev) {
+		ev.style.box-shadow="0px 0px 0px #888888";
+	}
+	var btns=document.getElementsByTagName('button');
+	for(btn in btns){
+		// omd(btn);
+		console.log(btn);
+	}
+</script>
+</html>

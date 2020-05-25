@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>计算器1.0</title>
+	<title>计算器1.1</title>
 	<script src="js/calculator.js"></script>
 	<style>
 		.camin{
@@ -17,21 +17,24 @@
 			display: block;
 			width: 75px;
 			height: 60px;
-			line-height: 60px;
-			font-size: 24px;
+			/*按照父级字号 假设是16px*/
+			font-size: 170%;
+			/*当某些值相互依赖时，应该把他们的相互关系用代码表达出来 更易于维护*/
+			/*行高是字体大小的2.5倍 */
+			line-height: 2.5;
 		}
 		button{
-			border:#898a8c solid 1px;
+			border:#898a8c solid .1em;
 			background-color: #7C7C7C;
 			/*设置圆角*/
-			border-radius: 15px;
-			box-shadow:0px 4px 1px #888888; 
+			border-radius: 1.2em;
+			box-shadow:0 .3em .1em #888888; 
 		}
 		div{
 			width: 500px;
-			border:#898a8c solid 1px;
+			border:#898a8c solid .1em;
 			/*设置阴影 x y 模糊程度 颜色*/
-			box-shadow:10px 10px 5px #888888; 
+			box-shadow:.65em .65em .325em #888888; 
 		}
 		a{
 			text-decoration: none;
@@ -44,14 +47,14 @@
 			color: pink;
 		}
 		caption{
-			font-size:30px;
-			letter-spacing: 5px;
+			font-size:200%;
+			letter-spacing: .2em;
 			font-family: 宋体;
-			margin-top: 15px;
+			margin-top: .5em;
 		}
 		.org-c{
 			background-color: #FE6600;
-			border:#FE6600 solid 1px;
+			border:#FE6600 solid .1em;
 		}
 		.nub-c{
 			background-color: #fff;
